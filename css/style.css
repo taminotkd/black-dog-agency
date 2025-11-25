@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Personalizações globais */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #050505; 
+}
+::-webkit-scrollbar-thumb {
+    background: #333; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #F5B400; /* Primary color */
+}
+
+/* Utilitário para classes que não estão no Tailwind CDN padrão */
+.text-stroke {
+    -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+}
+
+/* Custom Swiper Pagination */
+.swiper-pagination-bullet {
+    background: #fff !important;
+    opacity: 0.3 !important;
+}
+.swiper-pagination-bullet-active {
+    background: #F5B400 !important; /* Primary */
+    opacity: 1 !important;
+}
+
+/* Animação Fade In */
+.fade-in-section {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Começa um pouco para baixo */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Define a suavidade */
+    will-change: opacity, transform; /* Otimiza performance */
+}
+
+.is-visible {
+    opacity: 1 !important; /* Torna visível */
+    transform: translateY(0) !important; /* Coloca na posição original */
+}
+
+/* Mobile Menu Transition */
+.mobile-open {
+    transform: translateX(0) !important;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "black-dog-agency",
+  "version": "1.0.0",
+  "description": "Site one-page da agência Black Dog",
+  "main": "index.js",
+  "scripts": {
+      "build:css": "npx tailwindcss -i ./css/styles.css -o ./css/output.css --watch"
+    },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taminotkd/black-dog-agency.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/taminotkd/black-dog-agency/issues"
+  },
+  "homepage": "https://github.com/taminotkd/black-dog-agency#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
