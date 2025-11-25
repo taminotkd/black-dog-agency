@@ -57,24 +57,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 4. SCROLL ANIMATION (INTERSECTION OBSERVER) ---
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target); // Anima apenas uma vez
-            }
-        });
-    }, observerOptions);
-
+    // --- 4. SCROLL ANIMATION  ---
     const fadeElements = document.querySelectorAll('.fade-in-section');
-    fadeElements.forEach(el => observer.observe(el));
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (prefersReducedMotion.matches) {
+        fadeElements.forEach(el => el.classList.add('is-visible'));
+    } else if (fadeElements.length) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+    
+        const observer = new IntersectionObserver((entries, observerInstance) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observerInstance.unobserve(entry.target); // Anima apenas uma vez
+                }
+            });
+        }, observerOptions);
+    
+        fadeElements.forEach(el => observer.observe(el));
+    }
 
     // --- 5. THREE.JS BACKGROUND ---
     initThreeJS();
