@@ -36,7 +36,7 @@ html {
 /* Animação Fade In */
 .fade-in-section {
     opacity: 0; /* Começa invisível */
-    transform: translateY(30px); /* Começa um pouco para baixo */
+    transform: translateY(100px); /* Começa um pouco para baixo */
     filter: blur(6px);
     transition: opacity 1.2s ease-out, transform 0.8s ease-out, filter 0.8s ease-out; /* Define a suavidade */
     will-change: opacity, transform, filter; 
