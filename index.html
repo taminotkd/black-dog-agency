@@ -37,16 +37,16 @@
 
  <!-- HEADER--> 
     <header id="header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-transparent">
-        <div class="container mx-auto flex items-center justify-between h-20 px-6">
-            <a href="#" class="text-2xl font-bold tracking-tighter text-white hover:text-primary transition-colors">
-                BLACK<span class="text-primary">DOG</span>.
+        <div class="flex items-center justify-between h-20 px-0">
+            <a href="#" class="block hover:brightness-110 transition-all duration-300 pl-6">
+                <img src="./assets/images/logo-black-dog-3.png" alt="Black Dog" class="h-12 md:h-20 w-auto">
             </a>
 
-            <nav class="hidden md:flex gap-8">
-                <a href="#clientes" class="text-sm font-medium hover:text-primary transition-colors">Clientes</a>
-                <a href="#sobre" class="text-sm font-medium hover:text-primary transition-colors">Sobre nós</a>
-                <a href="#portfolio" class="text-sm font-medium hover:text-primary transition-colors">Portfólio</a>
-                <a href="#footer" class="text-sm font-medium hover:text-primary transition-colors">Contato</a>
+            <nav class="hidden md:flex gap-8 pr-6">
+                <a href="#clientes" class="text-sm font-bold hover:text-primary transition-colors">Clientes</a>
+                <a href="#sobre" class="text-sm font-bold hover:text-primary transition-colors">Sobre nós</a>
+                <a href="#portfolio" class="text-sm font-bold hover:text-primary transition-colors">Portfólio</a>
+                <a href="#footer" class="text-sm font-bold hover:text-primary transition-colors">Contato</a>
             </nav>
 
             <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Abrir Menu">
@@ -85,7 +85,7 @@
         >
             <source src="assets/videos/background-1.mp4" type="video/mp4">
             <!-- Fallback para navegadores que não suportam vídeo -->
-            <img src="assets/images/hero-fallback.jpg" alt="Fundo black dog" class="w-full h-full object-cover opacity-30">
+            <img src="./assets/images/black-dog-frontal.jpg" alt="Fundo black dog" class="w-full h-full object-cover opacity-30">
         </video>
         
         <div class="absolute inset-0 bg-gradient-to-r from-bg-main via-bg-main/50 to-transparent z-10 pointer-events-none"></div>
@@ -94,7 +94,7 @@
             <div class="max-w-3xl fade-in-section transition-all duration-700">
                 <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6 text-white">
                     Performance <br>
-                    <span class="text-primary">SEO</span> & Resultados.
+                    <span class="text-primary">WEB</span> & Resultados.
                 </h1>
                 <p class="text-lg md:text-xl text-text-muted mb-8 max-w-xl">
                     Somos a Black Dog. Transformamos código em crescimento. 
@@ -121,29 +121,12 @@
                 </div>
             </div>
         </div>
-    </section>
-
-     <!-- CLIENTES -->
-    <section id="clientes" class="py-16 bg-bg-main border-y border-border-subtle fade-in-section">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-sm font-semibold tracking-widest text-text-muted uppercase mb-8">Marcas que confiam na Black Dog</h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-60 transition-all duration-500">
-                
-                <img src="./assets/images/logo-ciana.png" alt="Ciana Pilates" class="h-12 w-auto object-contain hover:scale-150 transition-transform duration-300">
-                
-                <img src="./assets/images/logo-magneto.png" alt="Magneto Escalada" class="h-12 w-auto object-contain hover:scale-150 transition-transform duration-300">
-                
-                <img src="./assets/images/logo-ig-maquinas.jpg" alt="Cliente 3" class="h-12 w-auto object-contain hover:scale-150 transition-transform duration-300">
-                
-                <img src="./assets/images/logo-ct.png" alt="Cliente 4" class="h-12 w-auto object-contain hover:scale-150 transition-transform duration-300">
-    
-            </div>
-        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-bg-main z-30 pointer-events-none"></div>
     </section>
 
     <!-- LEMA -->
-    <section id="lema" class="py-24 bg-bg-main fade-in-section border-t border-border-subtle">
+    <section id="lema" class="pt-32 pb-24 bg-bg-main fade-in-section relative">
+        <div class="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-bg-main z-0 pointer-events-none"></div>
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
                 
@@ -182,9 +165,13 @@
     </section>
 
 
-    <!-- Comon trabalhamos-->
-    <section id="processo" class="py-24 bg-bg-main border-t border-border-subtle relative absolute inset-0 bg-fixed bg-center bg-cover"
-             style="background-image: url('./assets/images/paralax-2.png'); background-attachment: fixed;">
+    <!-- Como trabalhamos-->
+    <section id="processo" class="py-24 bg-bg-main border-t border-border-subtle relative overflow-hidden">
+        
+        <div class="absolute inset-0 bg-fixed bg-center bg-cover " 
+            style="background-image: url('./assets/images/paralax-1.png'); background-attachment: fixed; filter: brightness(0.6);">
+        </div>
+        
         <div class="container mx-auto px-6 relative z-10">
             
             <div class="max-w-3xl mb-16">
@@ -207,7 +194,7 @@
                         </p>
                     </div>
                     
-                    <div class="w-full md:w-5/12 order-3 md:order-2 bg-bg-surface p-6 rounded-xl border border-border-subtle">
+                    <div class="w-full md:w-5/12 order-3 md:order-2 bg-gradient-to-r from-bg-surface to-bg-main p-6 rounded-xl border border-border-subtle">
                         <p class="text-xs font-bold text-text-muted uppercase mb-4">Escopo de atuação:</p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 text-xs font-bold text-primary bg-primary/10 border border-primary/20 rounded">Landing Pages & Sites</span>
@@ -221,7 +208,7 @@
                 <div class="relative flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
                     <div class="absolute left-2 md:left-[50%] -translate-x-1/2 w-4 h-4 bg-bg-main border-2 border-primary rounded-full z-20 mt-1 md:mt-0"></div>
     
-                    <div class="w-full md:w-5/12 order-3 md:order-1 bg-bg-surface p-6 rounded-xl border border-border-subtle">
+                    <div class="bg-gradient-to-l from-bg-surface to-bg-main p-6 rounded-xl border border-border-subtle">
                          <div class="h-1 w-12 bg-primary mb-4"></div>
                          <p class="text-white italic">"Soluções personalizadas atacando necessidades comerciais."</p>
                     </div>
@@ -267,7 +254,6 @@
 
     <section id="servicos-detalhados" class="pt-12 pb-24 bg-bg-main relative z-20 overflow-hidden">
     
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
     
         <div class="container mx-auto px-6 relative z-10">
             
@@ -329,7 +315,7 @@
     <!-- PORTFÓLIO -->
     <section id="portfolio" class="py-24 bg-bg-main fade-in-section border-t border-border-subtle relative overflow-hidden">
         <div class="absolute inset-0 bg-fixed bg-center bg-cover " 
-            style="background-image: url('./assets/images/paralax-2.png'); background-attachment: fixed;">
+             style="background-image: url('./assets/images/paralax-1.png'); background-attachment: fixed; filter: brightness(0.7);">
         </div>
         
         <div class="container mx-auto px-6 relative z-10">
