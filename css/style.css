@@ -27,11 +27,7 @@ html {
     -webkit-text-stroke: 1px rgba(255,255,255,0.1);
 }
 
-/* Custom Swiper Pagination */
-.swiper-pagination-bullet {
-    background: #fff !important;
-    opacity: 0.3 !important;
-}
+
 .swiper-pagination-bullet-active {
     background: #F5B400 !important; /* Primary */
     opacity: 1 !important;
@@ -61,6 +57,18 @@ html {
         filter: none;
         will-change: opacity, transform, filter;
     }
+}
+
+/* Video Background */
+#hero-video {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Mobile Menu Transition */

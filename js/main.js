@@ -32,30 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             header.classList.add('bg-transparent');
         }
     });
-    // --- 3. SWIPER (CARROSSEL PORTFÓLIO) ---
-    // Inicializa apenas se a classe existir
-    if (document.querySelector('.mySwiper')) {
-        const swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-            },
-        });
-    }
+
 
     // --- 4. SCROLL ANIMATION  ---
     const fadeElements = document.querySelectorAll('.fade-in-section');
@@ -82,81 +59,47 @@ document.addEventListener('DOMContentLoaded', () => {
         fadeElements.forEach(el => observer.observe(el));
     }
 
-    // --- 5. THREE.JS BACKGROUND ---
-    initThreeJS();
+    // --- 5. VIDEO BACKGROUND ---
+    initVideoBackground();
 });
 
-function initThreeJS() {
-    const canvasContainer = document.getElementById('hero-canvas');
-    if (!canvasContainer) return;
+function initVideoBackground() {
+    const video = document.getElementById('hero-video');
+    if (!video) return;
 
-    // Verificar suporte WebGL
-    try {
-        const scene = new THREE.Scene();
-        // Cor do fundo da cena (preto profundo)
-        scene.background = new THREE.Color(0x050505);
-
-        // Camera
-        const camera = new THREE.PerspectiveCamera(75, canvasContainer.clientWidth / canvasContainer.clientHeight, 0.1, 1000);
-        camera.position.z = 5;
-
-        // Renderer
-        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-        renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight);
-        renderer.setPixelRatio(window.devicePixelRatio);
-        canvasContainer.appendChild(renderer.domElement);
-
-        // --- CRIAR PARTÍCULAS (STARFIELD / NEBULA VIBE) ---
-        const geometry = new THREE.BufferGeometry();
-        const count = 1500; // Quantidade de partículas
-        const posArray = new Float32Array(count * 3);
-
-        for(let i = 0; i < count * 3; i++) {
-            // Espalhar partículas aleatoriamente
-            posArray[i] = (Math.random() - 0.5) * 15; 
-        }
-
-        geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-
-        // Material das partículas
-        const material = new THREE.PointsMaterial({
-            size: 0.02,
-            color: 0xF5B400, // Cor Primary
-            transparent: true,
-            opacity: 0.8,
-        });
-
-        // Mesh
-        const particlesMesh = new THREE.Points(geometry, material);
-        scene.add(particlesMesh);
-
-        // Interação com Mouse (opcional e sutil)
-        let mouseX = 0;
-        let mouseY = 0;
-
-        // Animação Loop
-        const animate = () => {
-            requestAnimationFrame(animate);
-
-            // Rotação lenta constante
-            particlesMesh.rotation.y += 0.0005;
-            particlesMesh.rotation.x += 0.0002;
-
-            renderer.render(scene, camera);
-        };
-
-        animate();
-
-        // Responsividade
-        window.addEventListener('resize', () => {
-            camera.aspect = canvasContainer.clientWidth / canvasContainer.clientHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(canvasContainer.clientWidth, canvasContainer.clientHeight);
-        });
-
-    } catch (e) {
-        console.warn("WebGL não suportado ou erro no Three.js. Usando fallback.");
-        const fallback = document.getElementById('hero-fallback');
-        if(fallback) fallback.classList.remove('hidden');
+    // Garantir que o vídeo toque (alguns navegadores bloqueiam autoplay)
+    const playPromise = video.play();
+    
+    if (playPromise !== undefined) {
+        playPromise
+            .then(() => {
+                // Vídeo iniciou com sucesso
+                console.log('Vídeo de fundo iniciado');
+            })
+            .catch(error => {
+                // Autoplay foi bloqueado, tentar novamente após interação do usuário
+                console.warn('Autoplay bloqueado, aguardando interação do usuário');
+                
+                // Tentar reproduzir após primeiro scroll ou clique
+                const tryPlay = () => {
+                    video.play().catch(() => {});
+                    document.removeEventListener('scroll', tryPlay, { once: true });
+                    document.removeEventListener('click', tryPlay, { once: true });
+                    document.removeEventListener('touchstart', tryPlay, { once: true });
+                };
+                
+                document.addEventListener('scroll', tryPlay, { once: true, passive: true });
+                document.addEventListener('click', tryPlay, { once: true });
+                document.addEventListener('touchstart', tryPlay, { once: true });
+            });
     }
+
+    // Pausar vídeo quando a aba não está visível (economia de recursos)
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            video.pause();
+        } else {
+            video.play().catch(() => {});
+        }
+    });
 }
