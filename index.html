@@ -277,63 +277,126 @@
     <!-- SERVIÇOS DETALHADOS-->
 
     <section id="servicos-detalhados" class="pt-12 pb-24 bg-bg-main relative z-20 overflow-hidden fade-in-section">
-    
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
-    
+        <!--Fundo genérico com riscos-->
+        <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none z-0">
+            <div class="absolute -top-[50%] -left-[50%] w-[200%] h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent rotate-45 transform origin-center"></div>
+            <div class="absolute -top-[50%] -left-[50%] w-[200%] h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent -rotate-45 transform origin-center"></div>
+            <div class="absolute top-[20%] -left-[20%] w-[150%] h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent rotate-[30deg]"></div>
+            <div class="absolute bottom-[20%] -right-[20%] w-[150%] h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent rotate-[30deg]"></div>
+            <div class="absolute top-[10%] right-[-10%] w-[100%] h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent -rotate-[15deg]"></div>
+            <div class="absolute top-0 left-[5%] w-[1px] h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent"></div>
+            <div class="absolute top-0 left-[15%] w-[1px] h-full bg-gradient-to-b from-transparent via-primary/10 to-transparent"></div>
+            <div class="absolute top-0 left-[28%] w-[1px] h-full bg-gradient-to-b from-transparent via-primary/30 to-transparent"></div>
+            <div class="absolute top-0 left-[45%] w-[1px] h-full bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+            <div class="absolute top-0 left-[55%] w-[1px] h-full bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+            <div class="absolute top-0 right-[28%] w-[1px] h-full bg-gradient-to-b from-transparent via-primary/30 to-transparent"></div>
+            <div class="absolute top-0 right-[15%] w-[1px] h-full bg-gradient-to-b from-transparent via-primary/10 to-transparent"></div>
+            <div class="absolute top-0 right-[5%] w-[1px] h-full bg-gradient-to-b from-transparent via-primary/20 to-transparent"></div>
+            <div class="absolute top-[15%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+            <div class="absolute top-[35%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
+            <div class="absolute top-[50%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/5 to-transparent"></div> <div class="absolute bottom-[35%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
+            <div class="absolute bottom-[15%] left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent"></div>
+            <div class="absolute top-[25%] left-[10%] w-[20%] h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent rotate-12 opacity-50"></div>
+            <div class="absolute bottom-[25%] right-[10%] w-[20%] h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent -rotate-12 opacity-50"></div>
+        </div>
+
         <div class="container mx-auto px-6 relative z-10">
             
-            <div class="text-center mb-12">
-                <p class="text-white font-semibold flex items-center justify-center gap-2">
-                    <span class="h-px w-8 bg-border-subtle"></span>
-                    Entenda nossas áreas de atuação
-                    <span class="h-px w-8 bg-border-subtle"></span>
+            <div class="flex flex-col justify-center text-left mb-16 max-w-4xl">
+                <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-4">
+                    Expertise Técnica
+                </h2>
+                
+                <p class="text-3xl md:text-5xl font-black text-white leading-tight">
+                    Não fazemos de tudo. <br>
+                    Fazemos o que <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-white/20">traz resultado.</span>
                 </p>
             </div>
     
             <div id="services-carousel" class="
-                flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8
-                md:grid md:grid-cols-2 xl:grid-cols-4 md:overflow-visible md:pb-0
+                flex overflow-x-auto snap-x snap-mandatory gap-6 p-6
+                md:grid md:grid-cols-2 xl:grid-cols-4 md:overflow-visible
                 scrollbar-hide scroll-smooth
             ">
                 
-                <div class="min-w-[85vw] md:min-w-0 snap-center bg-bg-main p-8 rounded-xl border border-border-subtle hover:border-primary/40 transition-all group hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <div class="relative group min-w-[85vw] md:min-w-0 snap-center">
+                    <div class="absolute -inset-[1px] bg-primary rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur-[2px] z-0"></div>
+                    
+                    <div class="relative z-10 h-full bg-bg-surface p-8 rounded-xl border border-white/5 hover:border-transparent transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
+                        
+                        <div class="absolute -right-8 -bottom-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500 pointer-events-none rotate-12">
+                            <svg class="w-40 h-40 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+    
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 border border-primary/20 shadow-[0_0_15px_rgba(245,180,0,0.1)] group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        
+                        <h4 class="text-white font-bold text-lg mb-3">Landing Pages & Sites</h4>
+                        <p class="text-text-muted text-sm leading-relaxed relative z-10">
+                            Não criamos apenas "sites bonitos". Desenvolvemos páginas rápidas projetadas com um único objetivo: transformar visitantes em contatos comerciais (Leads).
+                        </p>
                     </div>
-                    <h4 class="text-white font-bold text-lg mb-3 group-hover:text-primary transition-colors">Landing Pages & Sites</h4>
-                    <p class="text-text-muted text-sm leading-relaxed">
-                        Não criamos apenas "sites bonitos". Desenvolvemos páginas rápidas projetadas com um único objetivo: transformar visitantes em contatos comerciais (Leads).
-                    </p>
                 </div>
     
-                <div class="min-w-[85vw] md:min-w-0 snap-center bg-bg-main p-8 rounded-xl border border-border-subtle hover:border-primary/40 transition-all group hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <div class="relative group min-w-[85vw] md:min-w-0 snap-center">
+                    <div class="absolute -inset-[1px] bg-primary rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur-[2px] z-0"></div>
+                    
+                    <div class="relative z-10 h-full bg-bg-surface p-8 rounded-xl border border-white/5 hover:border-transparent transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
+                        
+                        <div class="absolute -right-8 -bottom-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500 pointer-events-none rotate-12">
+                            <svg class="w-40 h-40 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+    
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 border border-primary/20 shadow-[0_0_15px_rgba(245,180,0,0.1)] group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        </div>
+                        
+                        <h4 class="text-white font-bold text-lg mb-3">SEO Técnico</h4>
+                        <p class="text-text-muted text-sm leading-relaxed relative z-10">
+                            Arrumamos a "casa" digital. Otimizamos a estrutura e o código do seu site para que o Google o entenda como relevante, atraindo tráfego gratuito.
+                        </p>
                     </div>
-                    <h4 class="text-white font-bold text-lg mb-3 group-hover:text-primary transition-colors">SEO Técnico</h4>
-                    <p class="text-text-muted text-sm leading-relaxed">
-                        Arrumamos a "casa" digital. Otimizamos a estrutura e o código do seu site para que o Google o entenda como relevante, atraindo tráfego gratuito a longo prazo.
-                    </p>
                 </div>
     
-                <div class="min-w-[85vw] md:min-w-0 snap-center bg-bg-main p-8 rounded-xl border border-border-subtle hover:border-primary/40 transition-all group hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                <div class="relative group min-w-[85vw] md:min-w-0 snap-center">
+                    <div class="absolute -inset-[1px] bg-primary rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur-[2px] z-0"></div>
+                    
+                    <div class="relative z-10 h-full bg-bg-surface p-8 rounded-xl border border-white/5 hover:border-transparent transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
+                        
+                        <div class="absolute -right-8 -bottom-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500 pointer-events-none rotate-12">
+                            <svg class="w-40 h-40 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+    
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 border border-primary/20 shadow-[0_0_15px_rgba(245,180,0,0.1)] group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                        </div>
+                        
+                        <h4 class="text-white font-bold text-lg mb-3">Analytics & Tags</h4>
+                        <p class="text-text-muted text-sm leading-relaxed relative z-10">
+                            Acabamos com o "achismo". Instalamos sensores (tags) para rastrear cada clique, sabendo exatamente de onde vêm seus clientes.
+                        </p>
                     </div>
-                    <h4 class="text-white font-bold text-lg mb-3 group-hover:text-primary transition-colors">Analytics & Tags</h4>
-                    <p class="text-text-muted text-sm leading-relaxed">
-                        Acabamos com o "achismo". Instalamos sensores (tags) para rastrear cada clique, sabendo exatamente de onde vêm seus clientes e quanto custa cada venda.
-                    </p>
                 </div>
     
-                <div class="min-w-[85vw] md:min-w-0 snap-center bg-bg-main p-8 rounded-xl border border-border-subtle hover:border-primary/40 transition-all group hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                <div class="relative group min-w-[85vw] md:min-w-0 snap-center">
+                    <div class="absolute -inset-[1px] bg-primary rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur-[2px] z-0"></div>
+                    
+                    <div class="relative z-10 h-full bg-bg-surface p-8 rounded-xl border border-white/5 hover:border-transparent transition-all duration-300 group-hover:-translate-y-1 overflow-hidden">
+                        
+                        <div class="absolute -right-8 -bottom-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500 pointer-events-none rotate-12">
+                            <svg class="w-40 h-40 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+    
+                        <div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-6 border border-primary/20 shadow-[0_0_15px_rgba(245,180,0,0.1)] group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        
+                        <h4 class="text-white font-bold text-lg mb-3">Mkt de Performance</h4>
+                        <p class="text-text-muted text-sm leading-relaxed relative z-10">
+                            Gestão de anúncios pagos (Ads) onde o objetivo não é curtida, é lucro. Focamos em campanhas que trazem retorno financeiro real.
+                        </p>
                     </div>
-                    <h4 class="text-white font-bold text-lg mb-3 group-hover:text-primary transition-colors">Mkt de Performance</h4>
-                    <p class="text-text-muted text-sm leading-relaxed">
-                        Gestão de anúncios pagos (Ads) onde o objetivo não é curtida, é lucro. Focamos em campanhas que trazem retorno financeiro real sobre o investimento.
-                    </p>
                 </div>
     
             </div>
@@ -354,58 +417,78 @@
         <div class="absolute inset-0 bg-fixed bg-center bg-cover" 
                 style="background-image: url('./assets/images/paralax-1.png'); background-attachment: fixed; filter: brightness(0.7);">
         </div>
+    
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-bg-main to-transparent z-0 pointer-events-none"></div>
         
         <div class="container mx-auto px-6 relative z-10 fade-in-section">
             
-            <div class="text-center mb-12">
-                <h2 class="text-2xl md:text-xl font-bold mb-4 text-white">Alguns dos projetos que entregamos recentemente.</h2>
+            <div class="flex flex-col justify-center text-left mb-12 max-w-4xl">
+                <h2 class="text-sm font-bold text-primary uppercase tracking-widest mb-3">
+                    Portfólio Selecionado
+                </h2>
+                
+                <p class="text-2xl md:text-3xl font-black text-white leading-tight">
+                    Alguns dos projetos que <br>
+                    entregamos recentemente.
+                </p>
             </div>
     
             <div id="portfolio-carousel" class="
-                flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8
-                md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0
-                scrollbar-hide scroll-smooth
-            ">
+                flex overflow-x-auto snap-x snap-mandatory gap-6 p-6 pb-8
+                md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible md:pb-6
+                scrollbar-hide scroll-smooth">
                 
-                <a href="https://cianapilates.com.br/" target="_blank" class="min-w-[85vw] md:min-w-0 snap-center group block bg-bg-surface border border-border-subtle rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="./assets/images/site-ciana.png" alt="Projeto Ciana" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-primary text-sm font-bold border border-primary px-3 py-1 rounded">Ver Site</span>
+                <a href="https://cianapilates.com.br/" target="_blank" class="relative group block min-w-[85vw] md:min-w-0 snap-center">
+                    <div class="absolute -inset-[1px] bg-primary rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur-[2px] z-0"></div>
+                    
+                    <div class="relative z-10 h-full bg-bg-surface border border-border-subtle rounded-xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="./assets/images/site-ciana.png" alt="Projeto Ciana" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="text-primary text-sm font-bold border border-primary px-3 py-1 rounded">Ver Site</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Landing Page</span>
-                        <h3 class="text-lg font-bold mt-1 mb-1 text-white group-hover:text-primary transition-colors">Ciana Pilates</h3>
-                        <p class="text-text-muted text-xs">Criação total da Landing Page.</p>
+                        <div class="p-5">
+                            <span class="text-xs text-primary font-bold uppercase tracking-wider">Landing Page</span>
+                            <h3 class="text-lg font-bold mt-1 mb-1 text-white group-hover:text-primary transition-colors">Ciana Pilates</h3>
+                            <p class="text-text-muted text-xs">Criação total da Landing Page.</p>
+                        </div>
                     </div>
                 </a>
     
-                <a href="https://www.igmaq.com.br/" target="_blank" class="min-w-[85vw] md:min-w-0 snap-center group block bg-bg-surface border border-border-subtle rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="./assets/images/site-igmaq.png" alt="Projeto Igmaq" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-primary text-sm font-bold border border-primary px-3 py-1 rounded">Ver Site</span>
+                <a href="https://www.igmaq.com.br/" target="_blank" class="relative group block min-w-[85vw] md:min-w-0 snap-center">
+                    <div class="absolute -inset-[1px] bg-primary rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur-[2px] z-0"></div>
+                    
+                    <div class="relative z-10 h-full bg-bg-surface border border-border-subtle rounded-xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="./assets/images/site-igmaq.png" alt="Projeto Igmaq" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="text-primary text-sm font-bold border border-primary px-3 py-1 rounded">Ver Site</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Landing Page</span>
-                        <h3 class="text-lg font-bold mt-1 mb-1 text-white group-hover:text-primary transition-colors">IG MAQ</h3>
-                        <p class="text-text-muted text-xs">Reestruturação completa mantendo identidade.</p>
+                        <div class="p-5">
+                            <span class="text-xs text-primary font-bold uppercase tracking-wider">Landing Page</span>
+                            <h3 class="text-lg font-bold mt-1 mb-1 text-white group-hover:text-primary transition-colors">IG MAQ</h3>
+                            <p class="text-text-muted text-xs">Reestruturação completa mantendo identidade.</p>
+                        </div>
                     </div>
                 </a>
     
-                <a href="https://carolinetamino.github.io/site-casamento/" target="_blank" class="min-w-[85vw] md:min-w-0 snap-center group block bg-bg-surface border border-border-subtle rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:-translate-y-1">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="./assets/images/site-casamento.png" alt="Projeto Casamento" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span class="text-primary text-sm font-bold border border-primary px-3 py-1 rounded">Ver Site</span>
+                <a href="https://carolinetamino.github.io/site-casamento/" target="_blank" class="relative group block min-w-[85vw] md:min-w-0 snap-center">
+                    <div class="absolute -inset-[1px] bg-primary rounded-xl opacity-0 group-hover:opacity-100 transition duration-500 blur-[2px] z-0"></div>
+                    
+                    <div class="relative z-10 h-full bg-bg-surface border border-border-subtle rounded-xl overflow-hidden transition-all duration-300 group-hover:-translate-y-1">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="./assets/images/site-casamento.png" alt="Projeto Casamento" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                <span class="text-primary text-sm font-bold border border-primary px-3 py-1 rounded">Ver Site</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="p-5">
-                        <span class="text-xs text-primary font-bold uppercase tracking-wider">Landing Page</span>
-                        <h3 class="text-lg font-bold mt-1 mb-1 text-white group-hover:text-primary transition-colors">Casamento Caroline & Tamino</h3>
-                        <p class="text-text-muted text-xs">Site para evento com RSVP e lista de presentes.</p>
+                        <div class="p-5">
+                            <span class="text-xs text-primary font-bold uppercase tracking-wider">Landing Page</span>
+                            <h3 class="text-lg font-bold mt-1 mb-1 text-white group-hover:text-primary transition-colors">Casamento Caroline & Tamino</h3>
+                            <p class="text-text-muted text-xs">Site para evento com RSVP e lista de presentes.</p>
+                        </div>
                     </div>
                 </a>
     
