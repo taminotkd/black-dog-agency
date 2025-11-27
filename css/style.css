@@ -75,3 +75,12 @@ html {
 .mobile-open {
     transform: translateX(0) !important;
 }
+
+/* Esconder Scrollbar no Carrossel Mobile */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}

@@ -103,3 +103,51 @@ function initVideoBackground() {
         }
     });
 }
+
+// --- Lógica do Carrossel de Serviços (Mobile) ---
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('services-carousel');
+    const dots = document.querySelectorAll('#services-pagination button');
+
+    if (carousel && dots.length > 0) {
+        carousel.addEventListener('scroll', () => {
+            // Calcula qual card está visível
+            const scrollPosition = carousel.scrollLeft;
+            const cardWidth = carousel.offsetWidth; // Largura visível do container
+            const activeIndex = Math.round(scrollPosition / cardWidth);
+
+            // Atualiza as bolinhas
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.remove('bg-white/20');
+                    dot.classList.add('bg-primary', 'w-4'); // Ativo: Amarelo e mais largo
+                } else {
+                    dot.classList.remove('bg-primary', 'w-4');
+                    dot.classList.add('bg-white/20'); // Inativo: Cinza transparente
+                }
+            });
+        });
+    }
+});
+
+// --- Lógica do Carrossel de Portfólio (Mobile) ---
+const portfolioCarousel = document.getElementById('portfolio-carousel');
+const portfolioDots = document.querySelectorAll('#portfolio-pagination button');
+
+if (portfolioCarousel && portfolioDots.length > 0) {
+    portfolioCarousel.addEventListener('scroll', () => {
+        const scrollPosition = portfolioCarousel.scrollLeft;
+        const cardWidth = portfolioCarousel.offsetWidth;
+        const activeIndex = Math.round(scrollPosition / cardWidth);
+
+        portfolioDots.forEach((dot, index) => {
+            if (index === activeIndex) {
+                dot.classList.remove('bg-white/20');
+                dot.classList.add('bg-primary', 'w-4');
+            } else {
+                dot.classList.remove('bg-primary', 'w-4');
+                dot.classList.add('bg-white/20');
+            }
+        });
+    });
+}
